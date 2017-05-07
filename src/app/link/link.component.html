@@ -1,0 +1,32 @@
+<div fxFlex fxFlex.layout="row" fxFlex.lg="360px" class="link-box">
+  <app-loader [type]="'DOUBLE_PULSE'"></app-loader>
+  <div fxFlex.layout="column" fxFlex.lg="100px" class="vote-count">
+    <span class="txt">
+      <span class="num">
+        {{count}}
+      </span><br/>Points
+    </span>
+    <div fxFlex.layout="row" class="total-count">
+      <div fxFlex.layout="column" class="tot-cnt pos-tot-count">
+        {{posTotal}}
+      </div>
+      <div fxFlex.layout="column" class="tot-cnt neg-tot-count">
+        {{negTotal}}
+      </div>
+    </div>
+  </div>
+  <div fxFlex.layout="column" class="link-desc">
+    <div fxFlex.layout="column" class="link-title">
+        <span>{{text}}</span><br/>
+        <div class="link-wrapper">
+          <a class="link" title="{{link}}">({{link}}</a>
+        </div>
+        <a (click)="newTab(link)"><md-icon class="link-icon">open_in_new</md-icon></a>
+    </div>
+    
+    <div fxFlex.layout="column" class="link-actions">
+      <button md-button (click)="proxyVote(true)" [disabled]="act && toggle"><md-icon class="pos-icon">thumb_up</md-icon>upvote</button>
+      <button md-button (click)="proxyVote(false)" [disabled]="act && !toggle"><md-icon class="neg-icon">thumb_down</md-icon>downvote</button>
+    </div>
+  </div>
+</div>

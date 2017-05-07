@@ -1,0 +1,88 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+html, body{
+    background: #444444;
+    color: #eeeeee;
+}
+
+$default-primary: (
+    50 : #e6f2fd,
+    100 : #c0ddf9,
+    200 : #96c7f6,
+    300 : #6bb1f2,
+    400 : #4ca0ef,
+    500 : #2c8fec,
+    600 : #2787ea,
+    700 : #217ce7,
+    800 : #1b72e4,
+    900 : #1060df,
+    A100 : #ffffff,
+    A200 : #d9e6ff,
+    A400 : #a6c5ff,
+    A700 : #8cb4ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$default-accent: (
+     50 : #fffae8,
+    100 : #fff3c6,
+    200 : #ffeba0,
+    300 : #ffe379,
+    400 : #ffdd5d,
+    500 : #ffd740,
+    600 : #ffd33a,
+    700 : #ffcd32,
+    800 : #ffc72a,
+    900 : #ffbe1c,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffefcd,
+    A700 : #ffe8b3,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-app-primary: mat-palette($default-primary);
+$custom-app-accent:  mat-palette($default-accent, 500, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$custom-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$custom-app-theme: mat-light-theme($custom-app-primary, $custom-app-accent, $custom-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($custom-app-theme);

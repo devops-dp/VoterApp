@@ -7,8 +7,85 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+    .loading{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      height: 12px;
+    }
+    .ripple{
+        width: 56px;
+        height: 56px;
+        border: 4px solid transparent;
+        border-radius: 50%;
+        position: relative;
+        top: 50%;
+        margin: -42px auto 0 auto;
+        display: none;
+    }
+
+    .ripple:before {
+        content: '';
+        border: 4px solid rgba(0, 82, 236, 0.5);
+        border-radius: 50%;
+        width: 67.2px;
+        height: 67.2px;
+        position: absolute;
+        top: -9.6px;
+        left: -9.6px;
+        animation: loader-scale 1.5s ease-out infinite;
+        animation-delay: 2s;
+        opacity: 0;
+    }
+
+    .ripple:after {
+        content: '';
+        border: 4px solid #0052ec;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        animation: loader-scale 1.5s ease-out infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes loader-scale {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1; 
+      }
+      100% {
+        transform: scale(1.25);
+        opacity: 0; 
+      } 
+    }
+  </style>
 </head>
 <body>
-  <app-root>Loading...</app-root>
+  <app-root>
+    <div class="loading">
+      Loading...
+    <div class="ripple">
+    </div>
+    </div>
+  </app-root>
 </body>
+<style type="text/css">
+.ripple{
+  display: block;
+  top: 40%;
+}
+</style>
 </html>

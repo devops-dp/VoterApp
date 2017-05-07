@@ -1,0 +1,132 @@
+.link-box{
+    height: 100px;
+    background: #dddddd;
+    color: #333333;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+.vote-count{
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    background: #888888;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.vote-count span.txt{
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 15%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.num{
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.link-title{
+    width: 100%;
+    height: 56px;
+    padding: 4px;
+}
+
+.link-wrapper{
+    max-width: 64%;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link-actions{
+    height: 28px;
+}
+
+.link-desc{
+    width: 100%;
+    padding: 4px 2px;
+}
+
+.link-actions button{
+    height: 26px;
+    line-height: 10px;
+}
+
+.link-actions button md-icon{
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.link, .link-icon{
+    font-size: 14px;
+}
+
+.link-icon{
+    float: left;
+    padding-left: 5px;
+    line-height: 24px;
+}
+
+a{
+    color: #333333;
+    cursor: pointer;
+}
+
+a:visited{
+    color: #333333;
+}
+
+a:hover{
+    color: #0000ee;
+}
+
+.link-icon::after{
+    content: ')';
+    font-family: 'Segoe UI', 'Roboto', helvetica;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.link-icon::after:hover{
+    color: #333333;
+}
+
+.total-count{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    margin-left: -5px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.tot-cnt{
+    width: 50%;
+    font-size: 12px;
+}
+
+.pos-tot-count{
+    float: left;
+    background: #039b0b;
+    border-bottom-left-radius: 3px;
+}
+
+.neg-tot-count{
+    background-color: #dc2121;
+    float: right;
+}
+
+.pos-icon{
+    color: #039b0b;
+}
+
+.neg-icon{
+    color: #dc2121;
+}

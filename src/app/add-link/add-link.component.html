@@ -1,0 +1,20 @@
+<form>
+  <md-card fxFlex fxHide.md class="new-link-card">
+    <md-card-header>
+      <md-card-title>Add new Link</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <md-input-container>
+        <!--<label for="title">Title</label>--><!--static label-->
+        <input id="title" type="text" mdInput placeholder="Title" #title/>
+      </md-input-container>
+      <md-input-container class="extend-full-width">
+        <!--<label for="link">Link</label>--><!--static label-->
+        <input id="link" type="text" mdInput placeholder="Link" #link/>
+      </md-input-container>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button color="primary" (click)="addLink(title, link)">Submit Link</button>
+    </md-card-actions>
+  </md-card>
+</form>
